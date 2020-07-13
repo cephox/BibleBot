@@ -4,7 +4,7 @@ from discord.ext.commands.errors import *
 from config import Config
 from utils import add_cogs, get_prefix_client, add_guild
 
-from cogs.commands import CommandsCog
+from cogs.settings import SettingsCog
 
 config = Config("config.json")
 
@@ -38,7 +38,7 @@ async def on_command_error(ctx: Context, error):
 
 add_cogs(
     bot,
-    CommandsCog
+    SettingsCog
 )
 
 bot.run(config.token)
