@@ -4,7 +4,7 @@ from utils import get_prefix
 from config import Config
 
 
-class SettingsCog(Cog):
+class SettingsCog(Cog, name="Settings"):
     def __init__(self, bot: Bot):
         self.bot = bot
 
