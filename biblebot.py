@@ -2,13 +2,13 @@ from discord import Status, Activity, ActivityType, Embed
 from discord.ext.commands import Bot, Context
 from discord.ext.commands.errors import *
 from config import Config
-from utils import add_cogs, get_prefix, add_guild
+from utils import add_cogs, get_prefix_client, add_guild
 
 from cogs.commands import CommandsCog
 
 config = Config("config.json")
 
-bot = Bot(command_prefix=get_prefix)
+bot = Bot(command_prefix=get_prefix_client)
 
 
 @bot.event

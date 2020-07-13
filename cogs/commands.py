@@ -1,5 +1,5 @@
 from discord import Embed
-from discord.ext.commands import Cog, Bot, command, group, Context, guild_only, has_permissions
+from discord.ext.commands import Cog, Bot, group, Context, guild_only, has_permissions
 from utils import get_prefix
 from config import Config
 
@@ -35,6 +35,8 @@ class CommandsCog(Cog):
             prefixes[str(ctx.guild.id)] = args[0]
             config.save("prefix", prefixes)
 
-            await ctx.send(embed=Embed(description=f"Prefix changed to `{await get_prefix(self.bot, ctx.message)}`"))
+            await ctx.send(embed=Embed(description=f"Prefix changed to `{await get_prefix(self.bot, ctx.message)}`", color=0x34bdeb))
             return
-        await ctx.send(embed=Embed(title="Prefix for " + ctx.guild.name))
+        await ctx.send(embed=Embed(title="Prefix for " + ctx.guild.name,
+                                   description=f"Your current Prefix: `{await get_prefix(self.bot, ctx.message)}`\n"
+                                               f"Change by typing `{await get_prefix(self.bot, ctx.message)}settings prefix <new Prefix>`", color=0x34bdeb))
