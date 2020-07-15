@@ -17,22 +17,22 @@ def add_cogs(bot, *cogs):
         bot.add_cog(cog)
 
 
-async def get_language(id):
+def get_language(id):
     languages = config.language
     try:
         return languages[str(id)]
     except KeyError:
-        await add_guild_by_id(id)
+        add_guild_by_id(id)
         languages = config.language
         return languages[str(id)]
 
 
-async def get_language_config(language):
+def get_language_config(language):
     return Translations(language)
 
 
-async def get_language_config_by_id(id):
-    return Translations(await get_language(id))
+def get_language_config_by_id(id) -> Translations:
+    return Translations(get_language(id))
 
 
 async def get_prefix_client(client, message):
@@ -40,7 +40,7 @@ async def get_prefix_client(client, message):
     try:
         return prefixes[str(message.guild.id)], f"<@!{client.user.id}> ", f"<@{client.user.id}> "
     except KeyError:
-        await add_guild(message.guild)
+        add_guild(message.guild)
         prefixes = config.prefix
         return prefixes[str(message.guild.id)], f"<@!{client.user.id}> ", f"<@{client.user.id}> "
 
@@ -50,15 +50,15 @@ async def get_prefix(message):
     try:
         return prefixes[str(message.guild.id)]
     except KeyError:
-        await add_guild(message.guild)
+        add_guild(message.guild)
         return prefixes[str(message.guild.id)]
 
 
-async def add_guild(guild):
-    await add_guild_by_id(guild.id)
+def add_guild(guild):
+    add_guild_by_id(guild.id)
 
 
-async def add_guild_by_id(id):
+def add_guild_by_id(id):
     prefixes = config.prefix
     languages = config.language
     languages[str(id)] = "en"
