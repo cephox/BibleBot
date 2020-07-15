@@ -9,5 +9,5 @@ BibleBot is a multi-functional Discord Bot that can send verses from the Bible.
 # Todo
 - [ ] Multi-Language Support (individual for Guilds)
 - [ ] More Settings
-- [ ] Quote the Bible (using [getbible](https://getbible.net/api)
+- [ ] Quote the Bible (using [getbible](https://getbible.net/api))
 - [ ] Acitvity cycle (Bible verses (english))
