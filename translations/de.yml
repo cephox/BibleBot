@@ -1,0 +1,95 @@
+# Übersetzungen
+
+# Embeds
+# Einstellungen
+general_settings_embed_title: BibleBot Einstellungen für {}
+general_settings_embed_description: Bitte nutze `{}settings <Einstellungen>` um mehr Informationen zu erhalten
+general_settings_embed_field_prefix_title: Präfix Einstellungen
+general_settings_embed_field_prefix_description: "Aktueller Präfix: `{}`\nNutze `{}settings prefix <Neuer Präfix>` um den Präfix zu ändern"
+
+# Präfix Einstellungen
+prefix_settings_embed_title: Präfix für {}
+prefix_settings_embed_description: "Aktueller Präfix: {}\nNutze `{}settings prefix <Neuer Präfix>` um den Präfix zu ändern"
+prefix_successfully_changed: Der Präfix wurde zu `{}` geändert
+
+# Abkürzungen für die Bibelbücher
+abbreviation_url: https://advent-verlag.de/abkuerzungen-biblischer-buecher
+bible_translations:
+  - luther1912
+  - luther1545
+  - elberfelder
+  - elberfelder1905
+  - schlachter
+
+missing_permission_error_message: Du hast keine Berechtigung um diesen Befehl auszuführen
+
+# Altes Testament
+1Mo: Genesis
+2Mo: Exodus
+3Mo: Leviticus
+4Mo: Numbers
+5Mo: Deuteronomy
+
+Jos: Joshua
+Ri: Judges
+Rut: Ruth
+1Sam: 1Samuel
+2Sam: 2Samuel
+1Kön: 1Kings
+2Kön: 2Kings
+1Chr: 1Chronicles
+2Chr: 2Chronicles
+Esr: Ezra
+Neh: Nehemiah
+Est: Esther
+Hiob: Job
+Ps: Psalms
+Spr: Proverbs
+Pred: Ecclesiastes
+Hld: Song
+Jes: Isaiah
+Jer: Jeremiah
+Kla: Lamentations
+Hes: Ezekiel
+Dan: Daniel
+Hos: Hosea
+Joel: Joel
+Am: Amos
+Obd: Obadiah
+Jona: Jonah
+Mi: Micah
+Nah: Nahum
+Hab: Habakkuk
+Zef: Zephaniah
+Hag: Haggai
+Sach: Zechariah
+Mal: Malachi
+
+# Neues Testament
+Mt: Matthew
+Mk: Mark
+Lk: Luke
+Joh: John
+Apg: Acts
+Röm: Romans
+1Kor: 1Corinthians
+2Kor: 2Corinthians
+Gal: Galatians
+Eph: Ephesians
+Phil: philippians
+Kol: Colossians
+1Ths: 1Thessalonians
+2Ths: 2Thessalonians
+1Tim: 1Timothy
+2Tim: 2Timothy
+Tit: Titus
+Phlm: Philemon
+Hbr: Hebrews
+Jak: James
+1Ptr: 1Peter
+2Ptr: 2Peter
+1Joh: 1John
+2Joh: 2John
+3Joh: 3John
+Jud: Jude
+Offb: Revelation

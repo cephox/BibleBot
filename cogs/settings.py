@@ -17,11 +17,11 @@ class SettingsCog(Cog, name="Settings"):
         """
         if ctx.invoked_subcommand is None:
             embed = Embed(title="Bible Bot Settings for " + ctx.guild.name,
-                          description=f"Please use `{await get_prefix(self.bot, ctx.message)}settings <setting>` for more Information",
+                          description=f"Please use `{await get_prefix(ctx.message)}settings <setting>` for more Information",
                           color=0x34bdeb)
             embed.add_field(name="Prefix Settings",
-                            value=f"Current Prefix: `{await get_prefix(self.bot, ctx.message)}`\n"
-                                  f"Type `{await get_prefix(self.bot, ctx.message)}settings prefix <new Prefix>` to change the Prefix")
+                            value=f"Current Prefix: `{await get_prefix(ctx.message)}`\n"
+                                  f"Type `{await get_prefix(ctx.message)}settings prefix <new Prefix>` to change the Prefix")
 
             await ctx.send(embed=embed)
 
@@ -34,8 +34,8 @@ class SettingsCog(Cog, name="Settings"):
             prefixes[str(ctx.guild.id)] = args[0]
             config.save("prefix", prefixes)
 
-            await ctx.send(embed=Embed(description=f"Prefix changed to `{await get_prefix(self.bot, ctx.message)}`", color=0x34bdeb))
+            await ctx.send(embed=Embed(description=f"Prefix changed to `{await get_prefix(ctx.message)}`", color=0x34bdeb))
             return
         await ctx.send(embed=Embed(title="Prefix for " + ctx.guild.name,
-                                   description=f"Your current Prefix: `{await get_prefix(self.bot, ctx.message)}`\n"
-                                               f"Change by typing `{await get_prefix(self.bot, ctx.message)}settings prefix <new Prefix>`", color=0x34bdeb))
+                                   description=f"Your current Prefix: `{await get_prefix(ctx.message)}`\n"
+                                               f"Change by typing `{await get_prefix(ctx.message)}settings prefix <new Prefix>`", color=0x34bdeb))

@@ -1,6 +1,7 @@
 from discord.ext.commands import Cog
 from config import config
 import re
+from translations import Translations
 
 
 def get_bible_queries(message: str):
@@ -16,16 +17,35 @@ def add_cogs(bot, *cogs):
         bot.add_cog(cog)
 
 
+async def get_language(id):
+    languages = config.language
+    try:
+        return languages[str(id)]
+    except KeyError:
+        await add_guild_by_id(id)
+        languages = config.language
+        return languages[str(id)]
+
+
+async def get_language_config(language):
+    return Translations(language)
+
+
+async def get_language_config_by_id(id):
+    return Translations(await get_language(id))
+
+
 async def get_prefix_client(client, message):
     prefixes = config.prefix
     try:
         return prefixes[str(message.guild.id)], f"<@!{client.user.id}> ", f"<@{client.user.id}> "
     except KeyError:
         await add_guild(message.guild)
+        prefixes = config.prefix
         return prefixes[str(message.guild.id)], f"<@!{client.user.id}> ", f"<@{client.user.id}> "
 
 
-async def get_prefix(client, message):
+async def get_prefix(message):
     prefixes = config.prefix
     try:
         return prefixes[str(message.guild.id)]
@@ -35,6 +55,13 @@ async def get_prefix(client, message):
 
 
 async def add_guild(guild):
+    await add_guild_by_id(guild.id)
+
+
+async def add_guild_by_id(id):
     prefixes = config.prefix
-    prefixes[str(guild.id)] = "."
+    languages = config.language
+    languages[str(id)] = "en"
+    prefixes[str(id)] = "."
     config.save("prefix", prefixes)
+    config.save("language", languages)
