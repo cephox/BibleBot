@@ -1,7 +1,7 @@
 from discord import Embed
 from discord.ext.commands import Cog, Bot, group, Context, guild_only, has_permissions
 from utils import get_prefix
-from config import Config
+from config import config
 
 
 class SettingsCog(Cog, name="Settings"):
@@ -30,7 +30,6 @@ class SettingsCog(Cog, name="Settings"):
     @guild_only()
     async def prefix(self, ctx: Context, *args):
         if args:
-            config = Config("config.json")
             prefixes = config.prefix
             prefixes[str(ctx.guild.id)] = args[0]
             config.save("prefix", prefixes)

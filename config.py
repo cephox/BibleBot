@@ -15,3 +15,6 @@ class Config:
         if item.startswith("f_"):
             return self._data[item[2:]].format
         return self._data[item]
+
+
+config = Config("config.json")
