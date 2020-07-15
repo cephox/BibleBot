@@ -1,5 +1,11 @@
 from discord.ext.commands import Cog
-from config import Config
+from config import config
+import re
+
+
+def get_bible_queries(message: str):
+    m = re.findall("\\[\\w+ \\d+:\\d+\\]", message)
+    return m
 
 
 def add_cogs(bot, *cogs):
@@ -11,7 +17,6 @@ def add_cogs(bot, *cogs):
 
 
 async def get_prefix_client(client, message):
-    config = Config("config.json")
     prefixes = config.prefix
     try:
         return prefixes[str(message.guild.id)], f"<@!{client.user.id}> ", f"<@{client.user.id}> "
@@ -21,7 +26,6 @@ async def get_prefix_client(client, message):
 
 
 async def get_prefix(client, message):
-    config = Config("config.json")
     prefixes = config.prefix
     try:
         return prefixes[str(message.guild.id)]
@@ -31,7 +35,6 @@ async def get_prefix(client, message):
 
 
 async def add_guild(guild):
-    config = Config("config.json")
     prefixes = config.prefix
     prefixes[str(guild.id)] = "."
     config.save("prefix", prefixes)
