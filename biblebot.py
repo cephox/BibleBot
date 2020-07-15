@@ -30,7 +30,7 @@ async def on_guild_remove(guild):
 @bot.event
 async def on_command_error(ctx: Context, error):
     if isinstance(error, MissingPermissions):
-        embed = Embed(description="You do not have the permission to execute this command")
+        embed = Embed(description="You do not have the permission to execute this command", color=0xff0000)
         await ctx.send(embed=embed)
 
 
