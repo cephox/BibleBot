@@ -2,7 +2,7 @@
 name: Language Request
 about: Describe this issue template's purpose here.
 title: ''
-labels: ''
+labels: Language Request
 assignees: ''
 
 ---
