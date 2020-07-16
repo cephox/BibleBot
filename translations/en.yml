@@ -1,0 +1,124 @@
+# Translation
+
+# Embeds
+# Settings
+general_settings_embed_title: BibleBot Settings for {}
+general_settings_embed_description: Please use `{}settings <option>` to get more information
+general_settings_embed_field_prefix_title: Prefix Settings
+general_settings_embed_field_prefix_description: "Current Prefix: `{}`\nUse `{}settings prefix <new prefix>` to change the prefix"
+
+# Prefix Settings
+prefix_settings_embed_title: Prefix for {}
+prefix_settings_embed_description: "Current Prefix: {}\nUse `{}settings prefix <new prefix>` to change it"
+prefix_successfully_changed: The prefix has been changed to `{}`
+
+# Biblebook abbreviations
+abbreviation_url: https://www.aresearchguide.com/bibleabb.html
+bible_translations:
+  - kjv
+  - akjv
+  - asv
+  - basicenglish
+  - douayrheims
+  - wb
+  - weymouth
+  - web
+  - ylt
+
+missing_permission_error_message: You don't have the right permission to execute this command
+
+# Old Testament
+Gen: Genesis
+Ex: Exodus
+Lev: Leviticus
+Num: Numbers
+Deut: Deuteronomy
+
+Jos: Joshua
+Josh: Joshua
+
+Judg: Judges
+Ruth: Ruth
+Rth: Ruth
+Ru: Ruth
+
+1Sam: 1Samuel
+2Sam: 2Samuel
+1Kgs: 1Kings
+1Kings: 1Kings
+2Kgs: 2Kings
+2Kings: 2Kings
+1Chr: 1Chronicles
+2Chr: 2Chronicles
+Ezr: Ezra
+Neh: Nehemiah
+Est: Esther
+Esth: Esther
+Job: Job
+Ps: Psalms
+Prov: Proverbs
+Ecc: Ecclesiastes
+Song: Song
+Isa: Isaiah
+Jer: Jeremiah
+Lam: Lamentations
+Ezek: Ezekiel
+Dan: Daniel
+Hos: Hosea
+Joel: Joel
+Am: Amos
+Obd: Obadiah
+Jon: Jonah
+Jhn: Jonah
+Mic: Micah
+Nah: Nahum
+Hab: Habakkuk
+Zeph: Zephaniah
+Zep: Zephaniah
+Hag: Haggai
+Zech: Zechariah
+Zec: Zechariah
+Mal: Malachi
+
+# New Testament
+Mt: Matthew
+Mk: Mark
+Lk: Luke
+Jn: John
+Acts: Acts
+Rom: Romans
+1Cor: 1Corinthians
+2Cor: 2Corinthians
+Gal: Galatians
+Eph: Ephesians
+Phil: philippians
+Col: Colossians
+1Thess: 1Thessalonians
+1Thes: 1Thessalonians
+1Th: 1Thessalonians
+2Thess: 2Thessalonians
+2Thes: 2Thessalonians
+2Th: 2Thessalonians
+1Tim: 1Timothy
+2Tim: 2Timothy
+Tit: Titus
+Titus: Titus
+Philemon: Philemon
+Philem: Philemon
+Phm: Philemon
+Pm: Philemon
+Heb: Hebrews
+Jas: James
+Jm: James
+1Pet: 1Peter
+2Pet: 2Peter
+1Jn: 1John
+1Jhn: 1John
+2Jn: 2John
+2Jhn: 2John
+3Jn: 3John
+3Jhn: 3John
+Jude: Jude
+Jud: Jude
+Jd: Jude
+Rev: Revelation
