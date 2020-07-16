@@ -1,16 +1,28 @@
 # Übersetzungen
 
+language-name: Deutsch
+
 # Embeds
 # Einstellungen
 general_settings_embed_title: BibleBot Einstellungen für {}
 general_settings_embed_description: Bitte nutze `{}settings <Einstellung>` um mehr Informationen zu erhalten
-general_settings_embed_field_prefix_title: Präfix Einstellungen
+general_settings_embed_field_prefix_title: Präfixeinstellungen
 general_settings_embed_field_prefix_description: "Aktueller Präfix: `{}`\nNutze `{}settings prefix <Neuer Präfix>` um den Präfix zu ändern"
+general_settings_embed_field_language_title: Spracheinstellungen
+general_settings_embed_field_language_description: "Aktuelle Sprache: {}\nNutze `{}settings language <Neue Sprache>` um die Sprache zu ändern"
 
-# Präfix Einstellungen
+# Präfixeinstellungen
 prefix_settings_embed_title: Präfix für {}
 prefix_settings_embed_description: "Aktueller Präfix: {}\nNutze `{}settings prefix <Neuer Präfix>` um den Präfix zu ändern"
 prefix_successfully_changed: Der Präfix wurde zu `{}` geändert
+
+
+# Spracheinstellungen
+language_settings_embed_title: Sprache für {}
+language_settings_embed_description: "Aktuelle Sprache: {}\nNutze `{}settings language <Neue Sprache>` um die Sprache zu ändern"
+language_successfully_changed: Die Sprache wurde zu `{}` geändert
+supported_languages: "Diese Sprachen werden zur Zeit unterstützt:"
+
 
 # Abkürzungen für die Bibelbücher
 abbreviation_url: https://advent-verlag.de/abkuerzungen-biblischer-buecher

@@ -1,16 +1,27 @@
 # Translation
 
+language_name: English
+
 # Embeds
 # Settings
 general_settings_embed_title: BibleBot Settings for {}
 general_settings_embed_description: Please use `{}settings <option>` to get more information
 general_settings_embed_field_prefix_title: Prefix Settings
 general_settings_embed_field_prefix_description: "Current Prefix: `{}`\nUse `{}settings prefix <new prefix>` to change the prefix"
+general_settings_embed_field_language_title: Spracheinstellungen
+general_settings_embed_field_language_description: "Aktuelle Sprache: {}\nNutze `{}settings language <Neue Sprache>` um die Sprache zu ändern"
+
 
 # Prefix Settings
 prefix_settings_embed_title: Prefix for {}
 prefix_settings_embed_description: "Current Prefix: {}\nUse `{}settings prefix <new prefix>` to change it"
 prefix_successfully_changed: The prefix has been changed to `{}`
+
+# Spracheinstellungen
+language_settings_embed_title: {}s Language
+language_settings_embed_description: "Current Language: {}\nUse `{}settings language <new language>` to change the language"
+language_successfully_changed: The Language has been changed to `{}`
+supported_languages: "Those languages are supported:"
 
 # Biblebook abbreviations
 abbreviation_url: https://www.aresearchguide.com/bibleabb.html
