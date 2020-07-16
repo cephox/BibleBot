@@ -3,7 +3,7 @@
 # Embeds
 # Einstellungen
 general_settings_embed_title: BibleBot Einstellungen für {}
-general_settings_embed_description: Bitte nutze `{}settings <Einstellungen>` um mehr Informationen zu erhalten
+general_settings_embed_description: Bitte nutze `{}settings <Einstellung>` um mehr Informationen zu erhalten
 general_settings_embed_field_prefix_title: Präfix Einstellungen
 general_settings_embed_field_prefix_description: "Aktueller Präfix: `{}`\nNutze `{}settings prefix <Neuer Präfix>` um den Präfix zu ändern"
 
