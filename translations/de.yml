@@ -16,7 +16,6 @@ prefix_settings_embed_title: Präfix für {}
 prefix_settings_embed_description: "Aktueller Präfix: {}\nNutze `{}settings prefix <Neuer Präfix>` um den Präfix zu ändern"
 prefix_successfully_changed: Der Präfix wurde zu `{}` geändert
 
-
 # Spracheinstellungen
 language_settings_embed_title: Sprache für {}
 language_settings_embed_description: "Aktuelle Sprache: {}\nNutze `{}settings language <Neue Sprache>` um die Sprache zu ändern"

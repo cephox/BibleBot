@@ -31,7 +31,7 @@ def get_language_config(language):
     return Translations(language)
 
 
-def get_language_config_by_id(id) -> Translations:
+def get_language_config_by_id(id):
     return Translations(get_language(id))
 
 
