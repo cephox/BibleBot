@@ -18,9 +18,18 @@ class BibleCog(Cog):
             book = query.split(" ")[0]
 
             try:
+
                 book_name = translation[book]
                 translation = get_language_config_by_id(message.guild.id)
-                request = BibleRequest(book, query.split(" ")[1])
+                request = BibleRequest(book_name, query.split(" ")[1])
+
+                embed = Embed(title=request.book_name + " " + str(request.chapter))
+
+                for verse in request.verses.keys():
+                    embed.add_field(name=str(verse), value=request.verses[verse], inline=False)
+
+                await message.channel.send(embed=embed)
+
             except KeyError:
                 translation = get_language_config_by_id(message.guild.id)
                 await message.channel.send(embed=Embed(
