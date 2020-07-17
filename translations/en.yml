@@ -9,16 +9,18 @@ general_settings_embed_description: Please use `{}settings <option>` to get more
 general_settings_embed_field_prefix_title: Prefix Settings
 general_settings_embed_field_prefix_description: "Current Prefix: `{}`\nUse `{}settings prefix <new prefix>` to change the prefix"
 general_settings_embed_field_language_title: Language Settings
-general_settings_embed_field_language_description: "Current Language: {}\nUse `{}settings language <new language (abbreviation)>` to change the language"
+general_settings_embed_field_language_description: "Current Language: `{}`\nUse `{}settings language <new language (abbreviation)>` to change the language"
+general_settings_embed_field_translation_title: Translation Settings
+general_settings_embed_field_translation_description: "Current Translation: `{}`\nUse `{}settings translation <new translation>` to change the translation"
 
 # Prefix Settings
 prefix_settings_embed_title: Prefix for {}
-prefix_settings_embed_description: "Current Prefix: {}\nUse `{}settings prefix <new prefix>` to change it"
+prefix_settings_embed_description: "Current Prefix: `{}`\nUse `{}settings prefix <new prefix>` to change it"
 prefix_successfully_changed: The prefix has been changed to `{}`
 
-# Spracheinstellungen
+# Language Settings
 language_settings_embed_title: "{}s Language"
-language_settings_embed_description: "Current Language: {}\nUse `{}settings language <new language (abbreviation)>` to change the language"
+language_settings_embed_description: "Current Language: `{}`\nUse `{}settings language <new language (abbreviation)>` to change the language"
 language_successfully_changed: The Language has been changed to `{}`
 supported_languages: "These languages are supported:"
 
@@ -34,6 +36,14 @@ bible_translations:
   - weymouth
   - web
   - ylt
+
+default_translation: kjv
+
+# Translation settings
+translation_settings_embed_title: Translation for {}
+translation_settings_embed_description: "Current Translation: `{}`\nUse `{}settings translation <new translation>` to change the translation"
+translation_successfully_changed: The translation has been changed to `{}`
+supported_translations: "These translations are supported for english language:"
 
 missing_permission_error_message: You don't have the right permission to execute this command
 book_abbr_not_available: This book abbreviation does not exist!

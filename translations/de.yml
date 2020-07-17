@@ -9,7 +9,9 @@ general_settings_embed_description: Bitte nutze `{}settings <Einstellung>` um me
 general_settings_embed_field_prefix_title: Präfixeinstellungen
 general_settings_embed_field_prefix_description: "Aktueller Präfix: `{}`\nNutze `{}settings prefix <Neuer Präfix>` um den Präfix zu ändern"
 general_settings_embed_field_language_title: Spracheinstellungen
-general_settings_embed_field_language_description: "Aktuelle Sprache: {}\nNutze `{}settings language <Neue Sprache (Kürzel)>` um die Sprache zu ändern"
+general_settings_embed_field_language_description: "Aktuelle Sprache: `{}`\nNutze `{}settings language <Neue Sprache (Kürzel)>` um die Sprache zu ändern"
+general_settings_embed_field_translation_title: Übersetzungseinstellungen
+general_settings_embed_field_translation_description: "Aktuelle Übersetzung: `{}`\nNutze `{}settings translation <Neue Übersetzung>` um die Übersetzung zu ändern"
 
 # Präfixeinstellungen
 prefix_settings_embed_title: Präfix für {}
@@ -18,7 +20,7 @@ prefix_successfully_changed: Der Präfix wurde zu `{}` geändert
 
 # Spracheinstellungen
 language_settings_embed_title: Sprache für {}
-language_settings_embed_description: "Aktuelle Sprache: {}\nNutze `{}settings language <Neue Sprache (Kürzel)>` um die Sprache zu ändern"
+language_settings_embed_description: "Aktuelle Sprache: `{}`\nNutze `{}settings language <Neue Sprache (Kürzel)>` um die Sprache zu ändern"
 language_successfully_changed: Die Sprache wurde zu `{}` geändert
 supported_languages: "Diese Sprachen werden zur Zeit unterstützt:"
 
@@ -30,6 +32,14 @@ bible_translations:
   - elberfelder
   - elberfelder1905
   - schlachter
+
+default_translation: luther1912
+
+# Übersetzungseinstellungen
+translation_settings_embed_title: Übersetzung für {}
+translation_settings_embed_description: "Aktuelle Übersetzung: `{}`\nNutze `{}settings translation <Neue Übersetzung>` um die Übersetzung zu ändern"
+translation_successfully_changed: Die Übersetzung wurde zu `{}` geändert
+supported_translations: "Diese Übersetzungen werden für die deutsche Sprache unterstützt:"
 
 missing_permission_error_message: Du hast keine Berechtigung um diesen Befehl auszuführen
 book_abbr_not_available: Diese Buchabkürzung gibt es nicht!

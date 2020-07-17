@@ -1,6 +1,6 @@
 from discord import Embed
 from discord.ext.commands import Cog, Bot, group, Context, guild_only, has_permissions
-from utils import get_prefix, get_language_config_by_id, get_language
+from utils import get_prefix, get_language_config_by_id, get_language, get_translation, get_possible_translations, get_default_bible_translation
 from config import config
 import os
 import yaml
@@ -34,7 +34,41 @@ class SettingsCog(Cog, name="Settings"):
                             value=settings.f_general_settings_embed_field_language_description(
                                 get_language(ctx.guild.id), await get_prefix(ctx.message)))
 
+            embed.add_field(name=settings.general_settings_embed_field_translation_title,
+                            value=settings.f_general_settings_embed_field_translation_description(
+                                get_translation(ctx.guild.id), await get_prefix(ctx.message)))
+
             await message.edit(embed=embed)
+
+    @settings.command(name="translation")
+    @has_permissions(administrator=True)
+    @guild_only()
+    async def translation(self, ctx: Context, *args):
+        language_config = get_language_config_by_id(ctx.guild.id)
+
+        if args and args[0] in get_possible_translations(ctx.guild.id):
+
+            translation = config.translation
+            translation[str(ctx.guild.id)] = args[0]
+            config.save("translation", translation)
+
+            await ctx.send(
+                embed=Embed(
+                    description=language_config.f_translation_successfully_changed(get_translation(ctx.guild.id)),
+                    color=0x34bdeb))
+
+            return
+
+        print(1)
+        embed = Embed(title=language_config.f_translation_settings_embed_title(ctx.guild.name),
+                      description=language_config.f_translation_settings_embed_description(
+                          get_translation(ctx.guild.id), await get_prefix(ctx.message)),
+                      color=0x34bdeb)
+
+        embed.add_field(name=language_config.supported_translations,
+                        value="\n".join([f"`{i}`" for i in get_possible_translations(ctx.guild.id)]))
+
+        await ctx.send(embed=embed)
 
     @settings.command(name="language")
     @has_permissions(administrator=True)
@@ -44,8 +78,12 @@ class SettingsCog(Cog, name="Settings"):
 
         if args:
             langs = config.language
+            translation = config.translation
             langs[str(ctx.guild.id)] = args[0]
             config.save("language", langs)
+
+            translation[str(ctx.guild.id)] = get_default_bible_translation(str(ctx.guild.id))
+            config.save("translation", translation)
 
             settings = get_language_config_by_id(ctx.guild.id)
 
@@ -61,7 +99,6 @@ class SettingsCog(Cog, name="Settings"):
                       color=0x34bdeb)
 
         langs = dict()
-        print(1)
 
         for filename in os.listdir("./translations"):
             if filename.endswith(".yml"):

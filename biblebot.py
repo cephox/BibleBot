@@ -24,8 +24,14 @@ async def on_guild_join(guild):
 @bot.event
 async def on_guild_remove(guild):
     prefixes = config.prefix
+    translations = config.translation
+    languages = config.language
     prefixes.pop(str(guild.id))
+    translations.pop(str(guild.id))
+    languages.pop(str(guild.id))
     config.save("prefix", prefixes)
+    config.save("translation", translations)
+    config.save("language", languages)
 
 
 @bot.event

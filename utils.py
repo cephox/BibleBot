@@ -35,6 +35,24 @@ def get_language_config_by_id(id):
     return Translations(get_language(id))
 
 
+def get_default_bible_translation(id):
+    return Translations(get_language(id)).default_translation
+
+
+def get_translation(id):
+    translations = config.translation
+    try:
+        return translations[str(id)]
+    except KeyError:
+        add_guild_by_id(id)
+        translations = config.translation
+        return translations[str(id)]
+
+
+def get_possible_translations(id):
+    return Translations(get_language(id)).bible_translations
+
+
 async def get_prefix_client(client, message):
     prefixes = config.prefix
     try:
@@ -60,8 +78,11 @@ def add_guild(guild):
 
 def add_guild_by_id(id):
     prefixes = config.prefix
-    languages = config.language
+    translations = config.language
+    languages = config.translation
     languages[str(id)] = "en"
     prefixes[str(id)] = "."
+    translations[str(id)] = get_default_bible_translation(str(id))
     config.save("prefix", prefixes)
     config.save("language", languages)
+    config.save("translation", translations)
