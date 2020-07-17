@@ -14,7 +14,7 @@ Although it is most of the time offline, if the first full-release comes out, yo
   3. Make a pull-request
   
 # Todo
-- [ ] Multi-Language Support (individual for Guilds) (WIP)
+- [x] Multi-Language Support (individual for Guilds)
 - [ ] More Settings
 - [ ] Quote the Bible (using [getbible](https://getbible.net/api))
 - [ ] Acitvity cycle (Bible verses (english))
