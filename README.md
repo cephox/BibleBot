@@ -19,17 +19,7 @@ Although it is most of the time offline, if the first full-release comes out, yo
   
 # Todo
 - [x] Multi-Language Support (individual for Guilds)
+- [x] Quote the Bible (using [getbible](https://getbible.net/api))
 - [ ] More Settings (like change bible translation)
-- [ ] Quote the Bible (using [getbible](https://getbible.net/api))
 - [ ] Acitvity cycle (Bible verses (english))
 - [ ] TTS Support
-
-translations
-Added bible.py
-1 minute ago
-LICENSE
-Create LICENSE
-2 days ago
-README.md
-Update README.md
-1 minute ago
