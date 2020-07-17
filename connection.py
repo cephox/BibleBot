@@ -2,16 +2,18 @@ import requests
 import json
 
 
-def get_bible_verse(book, chapter, verse):
+def get_bible_verse(book, chapter, verse, version=None):
     url = "https://getbible.net/json?passage=" + book + chapter + ":" + verse
+    if version:
+        url += "&v=" + version.lower()
     r = requests.get(url)
     data = r.text.replace("(", "", 1)[::-1].replace(")", "", 1).replace(";", "", 1)[::-1]
     return json.loads(data)
 
 
 class BibleRequest:
-    def __init__(self, book, chapter, verses):
-        self.json = get_bible_verse(book, chapter, verses)
+    def __init__(self, book, chapter, verses, version=None):
+        self.json = get_bible_verse(book, chapter, verses, version)
         self.books = self.json["book"]
         self.verses = dict()
         for i in self.books:
