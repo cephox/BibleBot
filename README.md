@@ -18,3 +18,4 @@ Although it is most of the time offline, if the first full-release comes out, yo
 - [ ] More Settings (like change bible translation)
 - [ ] Quote the Bible (using [getbible](https://getbible.net/api))
 - [ ] Acitvity cycle (Bible verses (english))
+- [ ] TTS Support
