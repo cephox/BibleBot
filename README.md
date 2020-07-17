@@ -13,6 +13,9 @@ e.g.
 ```
 For example you can write `I like [Jn 3:16] the most because ...` and the Bot still is going the quote the Bible
 
+# How does a quote look like
+[![https://imgur.com/c5vPjHs.png](https://imgur.com/c5vPjHs.png)](https://imgur.com/c5vPjHs.png)
+
 # Invite Link
 [Invite](https://discord.com/api/oauth2/authorize?client_id=689383347545440313&permissions=522304&scope=bot) the Bot to your Server.
 
