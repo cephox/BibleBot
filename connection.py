@@ -2,8 +2,8 @@ import requests
 import json
 
 
-def get_bible_verse(book, chapter, verse, version=None):
-    url = "https://getbible.net/json?passage=" + book + chapter + ":" + verse
+def get_bible_verse(book, query, version=None):
+    url = "https://getbible.net/json?passage=" + book + query
     if version:
         url += "&v=" + version.lower()
     r = requests.get(url)
@@ -12,8 +12,8 @@ def get_bible_verse(book, chapter, verse, version=None):
 
 
 class BibleRequest:
-    def __init__(self, book, chapter, verses, version=None):
-        self.json = get_bible_verse(book, chapter, verses, version)
+    def __init__(self, book, query, version=None):
+        self.json = get_bible_verse(book, query, version)
         self.books = self.json["book"]
         self.verses = dict()
         for i in self.books:
