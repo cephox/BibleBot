@@ -64,7 +64,6 @@ class SettingsCog(Cog, name="Settings"):
 
             return
 
-        print(1)
         embed = Embed(title=language_config.f_translation_settings_embed_title(ctx.guild.name),
                       description=language_config.f_translation_settings_embed_description(
                           get_translation(ctx.guild.id), await get_prefix(ctx.message)),
