@@ -2,6 +2,7 @@ from discord import Message, Embed
 from discord.ext.commands import Cog, Bot
 from utils import get_bible_queries, get_language_config_by_id
 from connection import BibleRequest
+from datetime import datetime
 
 
 class BibleCog(Cog):
@@ -24,6 +25,9 @@ class BibleCog(Cog):
                 request = BibleRequest(book_name, query.split(" ")[1])
 
                 embed = Embed(title=request.book_name + " " + str(request.chapter))
+
+                embed.set_footer(text="Bible quoted using getbible.net; Bot by ce_phox#1259", icon_url=self.bot.user.avatar_url)
+                embed.timestamp = datetime.utcnow()
 
                 for verse in request.verses.keys():
                     embed.add_field(name=str(verse), value=request.verses[verse], inline=False)
