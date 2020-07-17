@@ -1,6 +1,6 @@
 from discord import Message, Embed
 from discord.ext.commands import Cog, Bot
-from utils import get_bible_queries, get_language_config_by_id
+from utils import get_bible_queries, get_language_config_by_id, get_translation
 from connection import BibleRequest
 from datetime import datetime
 
@@ -22,7 +22,7 @@ class BibleCog(Cog):
 
                 book_name = translation[book]
                 translation = get_language_config_by_id(message.guild.id)
-                request = BibleRequest(book_name, query.split(" ")[1])
+                request = BibleRequest(book_name, query.split(" ")[1], get_translation(message.guild.id))
 
                 embed = Embed(title=request.book_name + " " + str(request.chapter))
 
