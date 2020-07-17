@@ -26,7 +26,7 @@ class BibleCog(Cog):
 
                 embed = Embed(title=request.book_name + " " + str(request.chapter))
 
-                embed.set_footer(text="Bible quoted using getbible.net; Bot by ce_phox#1259", icon_url=self.bot.user.avatar_url)
+                embed.set_footer(text="Bible quoted using getbible.net", icon_url=self.bot.user.avatar_url)
                 embed.timestamp = datetime.utcnow()
 
                 for verse in request.verses.keys():
