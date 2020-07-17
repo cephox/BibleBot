@@ -9,7 +9,7 @@ general_settings_embed_description: Bitte nutze `{}settings <Einstellung>` um me
 general_settings_embed_field_prefix_title: Präfixeinstellungen
 general_settings_embed_field_prefix_description: "Aktueller Präfix: `{}`\nNutze `{}settings prefix <Neuer Präfix>` um den Präfix zu ändern"
 general_settings_embed_field_language_title: Spracheinstellungen
-general_settings_embed_field_language_description: "Aktuelle Sprache: {}\nNutze `{}settings language <Neue Sprache>` um die Sprache zu ändern"
+general_settings_embed_field_language_description: "Aktuelle Sprache: {}\nNutze `{}settings language <Neue Sprache (Kürzel)>` um die Sprache zu ändern"
 
 # Präfixeinstellungen
 prefix_settings_embed_title: Präfix für {}
