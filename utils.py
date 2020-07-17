@@ -5,7 +5,7 @@ from translations import Translations
 
 
 def get_bible_queries(message: str):
-    m = re.findall("\\[\\w+ \\d+:\\d+\\]", message)
+    m = re.findall("\\[\\w+ \\d+:\\d+[0-9,-]+\\]", message)
     return m
 
 
