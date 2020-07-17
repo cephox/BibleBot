@@ -38,4 +38,4 @@ Although the Bot is most of the time offline, if the first full-release comes ou
 - [ ] Better help Command
 
 # Which API is used
-I'm using the API from [getbible](https://getbible.net/api)
+The Bot is using the API from [getbible](https://getbible.net/api)
