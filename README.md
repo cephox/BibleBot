@@ -1,6 +1,18 @@
 # BibleBot
 BibleBot is a multi-functional Discord Bot that quotes the Bible.
 
+# How to quote the Bible?
+The Bible can be quoted in any message by using following pattern:
+```asciidoc
+[Book-Abbreviation Chapter:Verse(s)]
+e.g.
+[Jn 3:16]
+[Jn 3:16-20]
+[Jn 3:17,20]
+[Jn 3:17,20-23]
+```
+For example you can write `I like [Jn 3:16] the most because ...` and the Bot still is going the quote the Bible
+
 # Invite Link
 [Invite](https://discord.com/api/oauth2/authorize?client_id=689383347545440313&permissions=522304&scope=bot) the Bot to your Server.
 
@@ -24,3 +36,6 @@ Although the Bot is most of the time offline, if the first full-release comes ou
 - [ ] Acitvity cycle (Bible verses (english))
 - [ ] TTS Support
 - [ ] Better help Command
+
+# Which API is used
+I'm using the API from [getbible](https://getbible.net/api)
