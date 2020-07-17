@@ -1,5 +1,5 @@
 from discord import Status, Activity, ActivityType, Embed
-from discord.ext.commands import Bot, Context
+from discord.ext.commands import AutoShardedBot, Context
 from discord.ext.commands.errors import *
 from config import config
 from utils import add_cogs, get_prefix_client, add_guild, get_language_config_by_id
@@ -7,7 +7,7 @@ from utils import add_cogs, get_prefix_client, add_guild, get_language_config_by
 from cogs.settings import SettingsCog
 from cogs.bible import BibleCog
 
-bot = Bot(command_prefix=get_prefix_client)
+bot = AutoShardedBot(command_prefix=get_prefix_client)
 
 
 @bot.event

@@ -1,12 +1,12 @@
 from discord import Message, Embed
-from discord.ext.commands import Cog, Bot
+from discord.ext.commands import Cog, AutoShardedBot
 from utils import get_bible_queries, get_language_config_by_id, get_translation
 from connection import BibleRequest
 from datetime import datetime
 
 
 class BibleCog(Cog):
-    def __init__(self, bot: Bot):
+    def __init__(self, bot: AutoShardedBot):
         self.bot = bot
 
     @Cog.listener()

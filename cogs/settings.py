@@ -1,5 +1,5 @@
 from discord import Embed
-from discord.ext.commands import Cog, Bot, group, Context, guild_only, has_permissions
+from discord.ext.commands import Cog, AutoShardedBot, group, Context, guild_only, has_permissions
 from utils import get_prefix, get_language_config_by_id, get_language, get_translation, get_possible_translations, \
     get_default_bible_translation
 from config import config
@@ -8,7 +8,7 @@ import yaml
 
 
 class SettingsCog(Cog, name="Settings"):
-    def __init__(self, bot: Bot):
+    def __init__(self, bot: AutoShardedBot):
         self.bot = bot
 
     @group(name="settings", aliases=["config"])
