@@ -1,5 +1,5 @@
 # BibleBot
-BibleBot is a multi-functional Discord Bot that can send verses from the Bible.
+BibleBot is a multi-functional Discord Bot that quotes the Bible.
 
 # Invite Link
 [Invite](https://discord.com/api/oauth2/authorize?client_id=689383347545440313&permissions=522304&scope=bot) the Bot to your Server.
@@ -7,6 +7,10 @@ BibleBot is a multi-functional Discord Bot that can send verses from the Bible.
 It only required most of the read and write permission but if you want it to have permission to send Quotes to Admins-only Channels, you should use [this](https://discord.com/api/oauth2/authorize?client_id=689383347545440313&permissions=8&scope=bot) link.
 
 Although it is most of the time offline, if the first full-release comes out, you'll be one of the first ones to use it.
+
+# Supported Languages
+- English
+- German
 
 # How to contribute
   1. Make a fork
@@ -19,3 +23,13 @@ Although it is most of the time offline, if the first full-release comes out, yo
 - [ ] Quote the Bible (using [getbible](https://getbible.net/api))
 - [ ] Acitvity cycle (Bible verses (english))
 - [ ] TTS Support
+
+translations
+Added bible.py
+1 minute ago
+LICENSE
+Create LICENSE
+2 days ago
+README.md
+Update README.md
+1 minute ago
