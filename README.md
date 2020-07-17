@@ -20,7 +20,7 @@ Although the Bot is most of the time offline, if the first full-release comes ou
 # Todo
 - [x] Multi-Language Support (individual for Guilds)
 - [x] Quote the Bible (using [getbible](https://getbible.net/api))
-- [ ] More Settings (like change bible translation)
+- [x] More Settings (like change bible translation)
 - [ ] Acitvity cycle (Bible verses (english))
 - [ ] TTS Support
 - [ ] Better help Command
