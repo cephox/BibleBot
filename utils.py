@@ -2,6 +2,7 @@ from discord.ext.commands import Cog
 from config import config
 import re
 from translations import Translations
+import json
 
 
 def get_bible_queries(message: str):
@@ -23,6 +24,7 @@ def get_language(id):
         return languages[str(id)]
     except KeyError:
         add_guild_by_id(id)
+        config.reload()
         languages = config.language
         return languages[str(id)]
 
@@ -45,6 +47,7 @@ def get_translation(id):
         return translations[str(id)]
     except KeyError:
         add_guild_by_id(id)
+        config.reload()
         translations = config.translation
         return translations[str(id)]
 
@@ -59,6 +62,7 @@ async def get_prefix_client(client, message):
         return prefixes[str(message.guild.id)], f"<@!{client.user.id}> ", f"<@{client.user.id}> "
     except KeyError:
         add_guild(message.guild)
+        config.reload()
         prefixes = config.prefix
         return prefixes[str(message.guild.id)], f"<@!{client.user.id}> ", f"<@{client.user.id}> "
 
@@ -69,6 +73,7 @@ async def get_prefix(message):
         return prefixes[str(message.guild.id)]
     except KeyError:
         add_guild(message.guild)
+        config.reload()
         return prefixes[str(message.guild.id)]
 
 
@@ -77,12 +82,18 @@ def add_guild(guild):
 
 
 def add_guild_by_id(id):
-    prefixes = config.prefix
-    translations = config.language
-    languages = config.translation
-    languages[str(id)] = "en"
-    prefixes[str(id)] = "."
-    translations[str(id)] = get_default_bible_translation(str(id))
-    config.save("prefix", prefixes)
-    config.save("language", languages)
-    config.save("translation", translations)
+    # prefixes = config.prefix
+    # translations = config.language
+    # languages = config.translation
+    # languages[str(id)] = "en"
+    # prefixes[str(id)] = "."
+    # translations[str(id)] = get_default_bible_translation(str(id))
+    # config.save("prefix", prefixes)
+    # config.save("language", languages)
+    # config.save("translation", translations)
+
+    data = json.load(open("config.json"))
+    data["prefix"][str(id)] = "."
+    data["language"][str(id)] = "en"
+    data["translation"][str(id)] = "kjv"
+    json.dump(data, open("config.json", "w"), indent=4)

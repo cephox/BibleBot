@@ -11,6 +11,9 @@ class Config:
         self._data[key] = value
         json.dump(self._data, open(self.filename, "w"), indent=4)
 
+    def reload(self):
+        self._data = json.load(open(self.filename))
+
     def __getattr__(self, item: str):
         if item.startswith("f_"):
             return self._data[item[2:]].format

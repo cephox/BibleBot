@@ -18,7 +18,7 @@ async def on_ready():
 
 @bot.event
 async def on_guild_join(guild):
-    await add_guild(guild)
+    add_guild(guild)
 
 
 @bot.event
@@ -32,6 +32,7 @@ async def on_guild_remove(guild):
     config.save("prefix", prefixes)
     config.save("translation", translations)
     config.save("language", languages)
+    config.reload()
 
 
 @bot.event
