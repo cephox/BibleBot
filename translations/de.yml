@@ -23,6 +23,7 @@ language_settings_embed_title: Sprache für {}
 language_settings_embed_description: "Aktuelle Sprache: `{}`\nNutze `{}settings language <Neue Sprache (Kürzel)>` um die Sprache zu ändern"
 language_successfully_changed: Die Sprache wurde zu `{}` geändert
 supported_languages: "Diese Sprachen werden zur Zeit unterstützt:"
+not_supported_language: Diese Sprache wird zur Zeit **nicht** unterstützt!
 
 
 # Abkürzungen für die Bibelbücher
@@ -40,6 +41,7 @@ translation_settings_embed_title: Übersetzung für {}
 translation_settings_embed_description: "Aktuelle Übersetzung: `{}`\nNutze `{}settings translation <Neue Übersetzung>` um die Übersetzung zu ändern"
 translation_successfully_changed: Die Übersetzung wurde zu `{}` geändert
 supported_translations: "Diese Übersetzungen werden für die deutsche Sprache unterstützt:"
+not_supported_translation: Diese Übersetzung wird **nicht** unterstützt!
 
 missing_permission_error_message: Du hast keine Berechtigung um diesen Befehl auszuführen
 book_abbr_not_available: Diese Buchabkürzung gibt es nicht!

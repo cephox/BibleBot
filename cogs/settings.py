@@ -1,6 +1,7 @@
 from discord import Embed
 from discord.ext.commands import Cog, Bot, group, Context, guild_only, has_permissions
-from utils import get_prefix, get_language_config_by_id, get_language, get_translation, get_possible_translations, get_default_bible_translation
+from utils import get_prefix, get_language_config_by_id, get_language, get_translation, get_possible_translations, \
+    get_default_bible_translation
 from config import config
 import os
 import yaml
@@ -46,7 +47,11 @@ class SettingsCog(Cog, name="Settings"):
     async def translation(self, ctx: Context, *args):
         language_config = get_language_config_by_id(ctx.guild.id)
 
-        if args and args[0] in get_possible_translations(ctx.guild.id):
+        if args:
+
+            if args[0] not in get_possible_translations(ctx.guild.id):
+                await ctx.send(embed=Embed(description=language_config.not_supported_translation, color=0xff0000))
+                return
 
             translation = config.translation
             translation[str(ctx.guild.id)] = args[0]
@@ -70,13 +75,19 @@ class SettingsCog(Cog, name="Settings"):
 
         await ctx.send(embed=embed)
 
-    @settings.command(name="language")
+    @settings.command(name="language", aliases=["lang"])
     @has_permissions(administrator=True)
     @guild_only()
     async def language(self, ctx: Context, *args):
         settings = get_language_config_by_id(ctx.guild.id)
+        supported_languages = [i.replace(".yml", "") for i in os.listdir("./translations")]
 
         if args:
+
+            if args[0] not in supported_languages:
+                await ctx.send(embed=Embed(description=settings.not_supported_language, color=0xff0000))
+                return
+
             langs = config.language
             translation = config.translation
             langs[str(ctx.guild.id)] = args[0]
