@@ -6,7 +6,7 @@ BibleBot is a multi-functional Discord Bot that quotes the Bible.
 
 It only required most of the read and write permission but if you want it to have permission to send Quotes to Admins-only Channels, you should use [this](https://discord.com/api/oauth2/authorize?client_id=689383347545440313&permissions=8&scope=bot) link.
 
-Although it is most of the time offline, if the first full-release comes out, you'll be one of the first ones to use it.
+Although the Bot is most of the time offline, if the first full-release comes out, you'll be one of the first ones to use it.
 
 # Supported Languages
 - English
