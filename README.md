@@ -15,6 +15,6 @@ Although it is most of the time offline, if the first full-release comes out, yo
   
 # Todo
 - [x] Multi-Language Support (individual for Guilds)
-- [ ] More Settings
+- [ ] More Settings (like change bible translation)
 - [ ] Quote the Bible (using [getbible](https://getbible.net/api))
 - [ ] Acitvity cycle (Bible verses (english))
