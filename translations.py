@@ -7,6 +7,8 @@ class Translations:
         self._translations: dict = yaml.safe_load(open(f"translations/{lang}.yml"))
 
     def __getattr__(self, item: str):
+        if item == "_translations":
+            return self._translations
         if item.startswith("f_"):
             return self._translations[item[2:]].format
         return copy.deepcopy(self._translations[item])

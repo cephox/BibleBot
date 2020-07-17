@@ -6,7 +6,7 @@ from translations import Translations
 
 def get_bible_queries(message: str):
     m = re.findall("\\[\\w+ \\d+:\\d+[0-9,-]+\\]", message)
-    return m
+    return [i.replace("[", "").replace("]", "") for i in m]
 
 
 def add_cogs(bot, *cogs):

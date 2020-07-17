@@ -5,6 +5,7 @@ from config import config
 from utils import add_cogs, get_prefix_client, add_guild, get_language_config_by_id
 
 from cogs.settings import SettingsCog
+from cogs.bible import BibleCog
 
 bot = Bot(command_prefix=get_prefix_client)
 
@@ -36,6 +37,7 @@ async def on_command_error(ctx: Context, error):
 
 add_cogs(
     bot,
+    BibleCog,
     SettingsCog
 )
 
