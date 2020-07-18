@@ -1,4 +1,4 @@
-# BibleBot
+d=689383347545440313&permissions=522304&scope=bot# BibleBot
 BibleBot is a multi-functional Discord Bot that quotes the Bible.
 
 ![GitHub issues](https://img.shields.io/github/issues-raw/cephox/BibleBot?label=Issues)
@@ -24,8 +24,6 @@ For example you can write `I like [Jn 3:16] the most because ...` and the Bot st
 [Invite](https://discord.com/api/oauth2/authorize?client_id=689383347545440313&permissions=522304&scope=bot) the Bot to your Server.
 
 It only required most of the read and write permission but if you want it to have permission to send Quotes to Admins-only Channels, you should use [this](https://discord.com/api/oauth2/authorize?client_id=689383347545440313&permissions=8&scope=bot) link.
-
-Although the Bot is most of the time offline, if the first full-release comes out, you'll be one of the first ones to use it.
 
 # Supported Languages
 - English
