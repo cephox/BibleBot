@@ -13,9 +13,9 @@ class BibleCog(Cog):
     async def on_message(self, message: Message):
         content = message.content
         queries = get_bible_queries(content)
-        translation = get_language_config_by_id(message.guild.id)._translations
 
         for query in queries:
+            translation = get_language_config_by_id(message.guild.id)._translations
             book = query.split(" ")[0]
 
             try:

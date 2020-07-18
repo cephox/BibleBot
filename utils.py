@@ -7,6 +7,7 @@ import json
 
 def get_bible_queries(message: str):
     m = re.findall("\\[\\w+ \\d+:\\d+[0-9,-]+\\]", message)
+    m = list(dict.fromkeys(m))
     return [i.replace("[", "").replace("]", "") for i in m]
 
 
