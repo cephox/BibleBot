@@ -1,4 +1,4 @@
-d=689383347545440313&permissions=522304&scope=bot# BibleBot
+# BibleBot
 BibleBot is a multi-functional Discord Bot that quotes the Bible.
 
 ![GitHub issues](https://img.shields.io/github/issues-raw/cephox/BibleBot?label=Issues)
