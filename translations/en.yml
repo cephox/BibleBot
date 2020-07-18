@@ -52,6 +52,8 @@ book_abbr_not_available: This book abbreviation does not exist!
 book_abbr_info: "Here you can find a list with possible abbreviations:"
 abbreviation_url: https://www.aresearchguide.com/bibleabb.html
 
+quote_not_available: This passage does not exist!
+
 # Old Testament
 Gen: Genesis
 Ex: Exodus

@@ -48,6 +48,8 @@ book_abbr_not_available: Diese Buchabkürzung gibt es nicht!
 book_abbr_info: "Bitte nutze diesen Link um eine Liste mit möglichen Abkürzungen zu erhalten:"
 abbreviation_url: https://advent-verlag.de/abkuerzungen-biblischer-buecher
 
+quote_not_available: Diese Bibelstelle gibt es nicht!
+
 # Altes Testament
 1Mo: Genesis
 2Mo: Exodus
