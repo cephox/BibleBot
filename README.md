@@ -70,7 +70,7 @@ It only required most of the read and write permission but if you want it to hav
   2. Contribute to your fork
   3. Make a pull-request
   
-___---
+---
   
 # Todo
 - [x] Multi-Language Support (individual for Guilds)
