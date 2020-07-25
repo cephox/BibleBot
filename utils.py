@@ -15,6 +15,8 @@ async def send_help(ctx: Context):
         embed.add_field(name=translation.settings_name,
                         value=translation.f_help_embed_settings_value(await get_prefix(ctx.message)), inline=False)
 
+    embed.add_field(name=translation.help_embed_invite_title, value="[" + translation.help_embed_invite_link + "](https://discord.com/oauth2/authorize?client_id=689383347545440313&permissions=522304&scope=bot)")
+
     await ctx.send(embed=embed)
 
 
