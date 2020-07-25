@@ -3,7 +3,13 @@
 language-name: Deutsch
 
 # Embeds
+help_embed_title: "{} Hilfe"
+help_embed_settings_value: "Passe deine Einstellungen an\nNutze `{}settings` um mehr Informationen zu erhalten"
+help_embed_quote_title: "Die Bibel zitieren"
+help_embed_quote_value: "Du kannst die Bibel folgendermaßen zitieren:\n- `[Joh 3:16]` um nur einen Vers zu erhalten\n- `[Joh 3:15-17]` um mehrere Verse zu zitieren\n- `[Joh 3:16,18]` um exakt diese Verse zu zitieren\n- `[Joh 3:16-17,19]` Um eine Passage und einen Vers zu zitieren\n- ..."
+
 # Einstellungen
+settings_name: Einstellungen
 general_settings_embed_title: BibleBot Einstellungen für {}
 general_settings_embed_description: Bitte nutze `{}settings <Einstellung>` um mehr Informationen zu erhalten
 general_settings_embed_field_prefix_title: Präfixeinstellungen

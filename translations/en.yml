@@ -3,7 +3,13 @@
 language-name: English
 
 # Embeds
+help_embed_title: "Help for {}"
+help_embed_settings_value: "Change the settings of your Bot\nUse `{}settings` for more information"
+help_embed_quote_title: "Quote the bible"
+help_embed_quote_value: "You can quote the bible this way:\n- `[Jn 3:16]` to get only one verse\n- `[Jn 3:15-17]` to quote a passage\n- `[Jn 3:16,18]` to quote exactly those verses\n- `[Jn 3:16-17,19]` to quote a passage and another verse\n- ..."
+
 # Settings
+settings_name: Settings
 general_settings_embed_title: BibleBot Settings for {}
 general_settings_embed_description: Please use `{}settings <option>` to get more information
 general_settings_embed_field_prefix_title: Prefix Settings
