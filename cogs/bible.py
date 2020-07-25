@@ -3,6 +3,7 @@ from discord.ext.commands import Cog, AutoShardedBot
 from utils import get_bible_queries, get_language_config_by_id, get_translation
 from connection import BibleRequest
 from datetime import datetime
+from json.decoder import JSONDecodeError
 
 
 class BibleCog(Cog):
@@ -22,7 +23,13 @@ class BibleCog(Cog):
 
                 book_name = translation[book]
                 translation = get_language_config_by_id(message.guild.id)
-                request = BibleRequest(book_name, query.split(" ")[1], get_translation(message.guild.id))
+                try:
+                    request = BibleRequest(book_name, query.split(" ")[1], get_translation(message.guild.id))
+                except JSONDecodeError:
+                    await message.channel.send(embed=Embed(
+                        description=translation.quote_not_available,
+                        color=0xff0000))
+                    continue
 
                 embed = Embed(title=request.book_name + " " + str(request.chapter))
 

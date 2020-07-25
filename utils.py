@@ -1,8 +1,30 @@
-from discord.ext.commands import Cog
+from discord import Embed
+from discord.ext.commands import Cog, Context, Command, CommandError
 from config import config
 import re
 from translations import Translations
 import json
+
+
+async def send_help(ctx: Context):
+    translation = get_language_config_by_id(ctx.guild.id)
+    embed = Embed(title=translation.f_help_embed_title("BibleBot"), color=0x03a1fc)
+    embed.add_field(name=translation.help_embed_quote_title, value=translation.help_embed_quote_value, inline=True)
+
+    if await can_run_command(ctx.bot.get_command("settings"), ctx):
+        embed.add_field(name=translation.settings_name,
+                        value=translation.f_help_embed_settings_value(await get_prefix(ctx.message)), inline=False)
+
+    embed.add_field(name=translation.help_embed_invite_title, value="[" + translation.help_embed_invite_link + "](https://discord.com/oauth2/authorize?client_id=689383347545440313&permissions=522304&scope=bot)")
+
+    await ctx.send(embed=embed)
+
+
+async def can_run_command(command: Command, ctx: Context):
+    try:
+        return await command.can_run(ctx)
+    except CommandError:
+        return False
 
 
 def get_bible_queries(message: str):
