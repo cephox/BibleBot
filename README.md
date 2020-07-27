@@ -73,12 +73,12 @@ It only required most of the read and write permission but if you want it to hav
 ---
   
 # Todo
+- [x] Better help Command
 - [x] Multi-Language Support (individual for Guilds)
 - [x] Quote the Bible (using [getbible](https://getbible.net/api))
 - [x] More Settings (like change bible translation)
 - [ ] Acitvity cycle (Bible verses (english))
 - [ ] TTS Support
-- [ ] Better help Command
 
 # Which API is used
 The Bot is using the API from [getbible](https://getbible.net/api)
