@@ -16,6 +16,9 @@ assignees: ''
 **Expected behavior**
 <!-- Please describe what you've expected to happen -->
 
+**Actual behavior**
+<!-- Please describe what actually happened -->
+
 **Screenshots**
 <!-- If possible e.g. a Message is incorrect, please attach a screenshot -->
 
