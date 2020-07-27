@@ -28,7 +28,7 @@ async def can_run_command(command: Command, ctx: Context):
 
 
 def get_bible_queries(message: str):
-    m = re.findall("\\[\\w+ \\d+:\\d+[0-9,-]+\\]", message)
+    m = re.findall("\\[\\d*\\w+ \\d+:\\d+[0-9,-]+\\]", message)
     m = list(dict.fromkeys(m))
     return [i.replace("[", "").replace("]", "") for i in m]
 
