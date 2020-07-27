@@ -31,7 +31,7 @@ To manage the settings you need to have Administrator permissions. Using `.setti
 
 ## Language
 The default language is english. Change it by using `.settings language <new language (abbreviation)>` or `.settings lang <new language (abbreviation)>`
-
+, dass du Te
 To get an overview of all possible languages with abbreviation use `.settings language` or `.settings lang`
 
 [![https://imgur.com/U24Fvd5.png](https://imgur.com/U24Fvd5.png)](https://imgur.com/U24Fvd5.png)
@@ -78,6 +78,9 @@ It only required most of the read and write permission but if you want it to hav
 - [x] Quote the Bible (using [getbible](https://getbible.net/api))
 - [x] More Settings (like change bible translation)
 - [ ] Acitvity cycle (Bible verses (english))
+- [ ] Add Languages:
+  - [ ] French
+  - [ ] Spanish ?
 - [ ] TTS Support
 
 # Which API is used
