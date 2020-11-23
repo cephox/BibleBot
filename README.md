@@ -2,7 +2,6 @@
 BibleBot is a multi-functional Discord Bot that quotes the Bible.
 
 ![GitHub issues](https://img.shields.io/github/issues-raw/cephox/BibleBot?label=Issues)
-![GitHub](https://img.shields.io/github/license/cephox/BibleBot?label=License)
 ![GitHub release](https://img.shields.io/github/v/release/cephox/BibleBot)
 
 # Content
